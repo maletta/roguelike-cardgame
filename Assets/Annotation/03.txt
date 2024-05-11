@@ -4,3 +4,5 @@ Maneira de criar dados para o card e replicar o prefab
 Criar Script CardDisplay, atribuir script ao prefab do Card, então atribuir os 
 componentes de UI e Imagens do prefab aos atributos da classe CardDisplay (clicando e arrastando)
 
+Criar ScriptableObjects de Card.cs, basicamente instâncias de Card.cs, mas só que manualmente,
+atribuindo valores manualmente pelo unity ao invés de código
