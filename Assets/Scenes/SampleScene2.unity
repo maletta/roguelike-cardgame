@@ -131,6 +131,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3096424148222936896, guid: 12ffa26232cc4144d881ee2aa1e494da, type: 3}
+      propertyPath: m_Name
+      value: DamageImage
+      objectReference: {fileID: 0}
     - target: {fileID: 3815481457854488107, guid: 12ffa26232cc4144d881ee2aa1e494da, type: 3}
       propertyPath: m_text
       value: 00
@@ -595,6 +599,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1300156156 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3797023922313168404, guid: 12ffa26232cc4144d881ee2aa1e494da, type: 3}
+  m_PrefabInstance: {fileID: 351525084}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1597101256 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4520013930440132570, guid: 12ffa26232cc4144d881ee2aa1e494da, type: 3}
@@ -622,6 +637,7 @@ MonoBehaviour:
   - {fileID: 588797472}
   - {fileID: 1179726559}
   - {fileID: 1113656724}
+  damageImage: {fileID: 1300156156}
 --- !u!114 &2092130426 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 664564962783581348, guid: 12ffa26232cc4144d881ee2aa1e494da, type: 3}
