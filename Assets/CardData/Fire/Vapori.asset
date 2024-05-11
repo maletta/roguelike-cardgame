@@ -18,4 +18,4 @@ MonoBehaviour:
   damageMin: 8
   damageMax: 11
   cardSprite: {fileID: 0}
-  damageType: 00000000
+  damageTypes: 00000000

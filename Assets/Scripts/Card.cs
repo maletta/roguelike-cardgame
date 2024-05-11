@@ -16,7 +16,7 @@ namespace NBESQ_Productions
         public int damageMin;
         public int damageMax;
         public Sprite cardSprite;
-        public List<DamageType> damageType;
+        public List<DamageType> damageTypes;
 
     }
 
