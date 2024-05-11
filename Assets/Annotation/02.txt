@@ -1,0 +1,23 @@
+Edit > Project Settings > TextMeshPro
+  para importar recursos do text mesh projeto
+
+Também importar recursos do drive e de assets da unity
+Modern RPG Free Icons Pack - https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqa0F1T0trOEVWWXR3WGlyX2tub0ZwUTlZS3F6Z3xBQ3Jtc0ttN1JwUVBaa1NVdE1pSkRkNlQtY0NSSGh1RW5sUXJ0YVBNTFh4cG93QW1SNGNoT050QnVuaWZXRTJVWHFpelplOVY2ZTItakR0ckJHV3lIelA3TDZiLWJOOFdNMW9RVE02b2VMa1lNWWNTWTYtYW9FQQ&q=https%3A%2F%2Fassetstore.unity.com%2Fpackages%2F2d%2Fgui%2Ficons%2Fmodern-rpg-free-icons-pack-264706&v=dSyKXYXGQO0
+Neon Sans Font - https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbXVFZy1rQ0laNm14Vk9FVERGMlBaZng0dEhEd3xBQ3Jtc0ttS1lka3RJNkRGeF9tdzhnWnNiY2dNcDV0UzVRUnNHQ000NzhOWHRDM3J5S0FXY2NwbDJSaWExVUpKQV9aOXNCMEhCVDh4RU5sTkVmamlKTmNscGJtV3FucHNXQTVMOEExbTVMU0dQaVRfajdpUTUwRQ&q=https%3A%2F%2Fwww.fontspace.com%2Fneon-sans-font-f67056&v=dSyKXYXGQO0
+Shared Drive - https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbGJxcnBNeG4zc0lRekFIemt5ZE9yYWJTTVN3QXxBQ3Jtc0ttbG5hOW5rNjc5UC1VRTh5OVZaenZSY0FNcGFuZHZTN2wwTnZ1TUxNMlR0QWxvdWdPaUlWcnpOUGZxc0g3aDJ3N29Xd254dnlRSXo4VkN2Y2NsSlhKdnJWbGxQZ08xTUpPQ3pXbGZFWTRmR0VpS2tCMA&q=https%3A%2F%2Fdrive.google.com%2Fdrive%2Ffolders%2F1yG2ALBMraXyQEOmVcxkdreDnaFFH0rb8%3Fusp%3Dsharing&v=dSyKXYXGQO0
+
+
+CarbBase image - TutorialCard1.png
+  painel esquerdo
+    Sprite Mode
+      256 pixel per unit
+      Sprite Editor
+        adicionar bordar 32 bottom, top, right e left
+          acredito que isso faz algum slice que permite aumentar ou diminuir o tamanho da carta caso precise sem deformar as laterais, que possuem borda
+
+
+
+Cena
+  Segundo botão > UI > EventSystem
+    registrar eventos que ocorrem e o que fazer quando ocorrerem
+    
