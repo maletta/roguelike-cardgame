@@ -1,0 +1,15 @@
+Criação de um projeto 2d
+
+Card.cs  - Arquivo dentro da pasta Scripts
+  Possui um namespace para organização das funções, classes e tipo
+    Possui uma classe Card
+      classe base para todas as cartas, uma espécie de prefab ?
+      possui atributos públicos que podem ser visualizados no editor unity
+      extends ScriptableObject
+      possui uma espécie de anotação que permite o script ser executado no menu da unity
+
+
+CardData - pasta utilizada para armazenar objetos criados a partir de Card.cs, da nova opção
+submenu criada com Card.cs
+
+
