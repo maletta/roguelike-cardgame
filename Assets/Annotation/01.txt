@@ -1,5 +1,11 @@
 Criação de um projeto 2d
 
+Criar Canvar Ui porque objetos UI só são rederizados dentro do canvas
+  unity inspector 
+    Render Mode > World Space
+    Resetar React Transform 0,0,0
+    Event Camera > Main Camera
+    
 Card.cs  - Arquivo dentro da pasta Scripts
   Possui um namespace para organização das funções, classes e tipo
     Possui uma classe Card
