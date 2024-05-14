@@ -1,0 +1,16 @@
+Base CardGame tutorial
+https://www.youtube.com/watch?v=j36rIYTvLkI&list=PLK8cTgLAUsQHkfCF73d43jhn185fu5h5c
+
+Multiplayer net code tutorials - from 2023 videos 
+https://www.youtube.com/watch?v=eymqAMmnqPg&list=PLS6sInD7ThM2_N9a1kN2oM4zZ-U-NtT2E&index=15
+
+
+Some multiplayer tutorials
+https://www.youtube.com/watch?v=DXsmhMMH9h4&list=PLN3F5XBRUL4N0sqs8LorzHeGWBtawmvJV&index=3
+
+Some multiplayer tutorials - from Code Monkey
+https://www.youtube.com/watch?v=msPNJ2cxWfw&list=PLzDRvYVwl53sSmEcIgZyDzrc0Smpq_9fN&index=
+
+Collection Manager tutorial - Show Card List with pagination
+https://www.youtube.com/watch?v=mhwGQ9XRBD8
+

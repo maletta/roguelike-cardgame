@@ -1,0 +1,28 @@
+Iniciando a configuração da mão
+
+Criamos um canvas para ser a base
+  unity inspector
+    render mode - screen overlay - sobreposição
+    outras modificações 
+
+  
+Depois de criar o script de HandManager
+  aumentar escala do prefab de carta em 100 100 100, não dava pra ver
+
+definir posicionamento e valor das variáveis de espaçamento das cartas na mão
+
+Criação do script DeckManager
+  Carrega todas as cartas da pasta ResourceCards
+  Adiciona as cartas ao deck
+
+  DrawCard
+    recebe instancia de HandManager
+    controla o index atual do deck com uma variável
+    retorna carta referente ao index atual
+    invoca handManager para adicionar carta atual a mao do jogador
+    define o index para o próximo index válido
+
+
+Criar um script DeckManagerEditor que extend funcionalidades do editor para facilitar a vida durante o desenvolvimento do deckmanger
+Esse script cria um botão na tela que ao ser clicado busca nosso handmanager na cena e passa este objeto para o deckManager.
+
