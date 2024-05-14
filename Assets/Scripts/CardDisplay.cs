@@ -41,13 +41,6 @@ public class CardDisplay : MonoBehaviour
 
         this.UpdateCardDisplay();
 
-        // Obtém todos os GameObjects filhos com o componente MeshRenderer
-        TMP_Text[] renderers = GetComponentsInChildren<TMP_Text>();
-
-        foreach (TMP_Text renderer in renderers)
-        {
-            Debug.Log("Found Renderer: " + renderer.gameObject.name);
-        }
     }
 
     void Update() // Update is called once per frame

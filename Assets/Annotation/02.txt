@@ -7,6 +7,16 @@ Neon Sans Font - https://www.youtube.com/redirect?event=video_description&redir_
 Shared Drive - https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbGJxcnBNeG4zc0lRekFIemt5ZE9yYWJTTVN3QXxBQ3Jtc0ttbG5hOW5rNjc5UC1VRTh5OVZaenZSY0FNcGFuZHZTN2wwTnZ1TUxNMlR0QWxvdWdPaUlWcnpOUGZxc0g3aDJ3N29Xd254dnlRSXo4VkN2Y2NsSlhKdnJWbGxQZ08xTUpPQ3pXbGZFWTRmR0VpS2tCMA&q=https%3A%2F%2Fdrive.google.com%2Fdrive%2Ffolders%2F1yG2ALBMraXyQEOmVcxkdreDnaFFH0rb8%3Fusp%3Dsharing&v=dSyKXYXGQO0
 
 
+Criar um Canvas para base de todos os textos e imagens usadas para renderizar o card
+  Canvas como objeto pai
+    render mode - world space
+    react transform 0,0,0
+    event camera none
+    vertex colors is always in gamma
+    dynamic  pixels per unit 128
+    reference pixel per unit 256
+
+
 CarbBase image - TutorialCard1.png
   painel esquerdo
     Sprite Mode
