@@ -11,6 +11,7 @@ public class DeckManagerEditor : Editor
     {
         DrawDefaultInspector();
 
+        // as an event that return a target. The event is about DeckManager, so return a DeckManager
         DeckManager deckManager = (DeckManager)target;
 
         if (GUILayout.Button("Draw Next Card")) // create a button and when clicked execute the block

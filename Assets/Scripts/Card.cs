@@ -8,6 +8,7 @@ namespace NBESQ_Productions
 
     [CreateAssetMenu(fileName = "New Card", menuName = "Card")] // cria um opção no menu create, 
     //instancia esse script como um ScriptableObject
+    // analogamente Card é uma classe que representa o domínio, de fato é um Card
     public class Card : ScriptableObject
     {
         public string cardName;

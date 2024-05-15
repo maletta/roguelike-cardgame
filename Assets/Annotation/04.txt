@@ -12,8 +12,10 @@ Depois de criar o script de HandManager
 definir posicionamento e valor das variáveis de espaçamento das cartas na mão
 
 Criação do script DeckManager
-  Carrega todas as cartas da pasta ResourceCards
-  Adiciona as cartas ao deck
+  
+  Start
+    Carrega todas as cartas da pasta Resource/Cards
+    Adiciona as cartas ao deck
 
   DrawCard
     recebe instancia de HandManager

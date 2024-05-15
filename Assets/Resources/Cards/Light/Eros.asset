@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Eros
   m_EditorClassIdentifier: 
   cardName: Eros
-  cardTypes: 
+  cardTypes: 04000000
   health: 10
   damageMin: 8
   damageMax: 16
