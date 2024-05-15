@@ -7,6 +7,7 @@ using NBESQ_Productions;
 using System;
 using System.Linq;
 
+// CardDisplay representa a visualização do Card, controla e altera suas características visuais
 public class CardDisplay : MonoBehaviour
 {
     public Card cardData;

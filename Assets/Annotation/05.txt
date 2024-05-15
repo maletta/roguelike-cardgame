@@ -1,0 +1,37 @@
+Copiar o script do drive para o projeto DragUIObject.cs
+
+DragUIObject
+  responsável por calcular o o click no mapa
+  responsável por calcular o drag no mapa
+  responsável por calcular o drop no mapa que é a relação entre o click e o drag multiplicado pela sensibilidade
+
+Copiar a imagem TutorialCardHighlight.png para a pasta Sprite
+alterar PPU - pixer per unit para 256
+
+Editar CardPrefab
+  adicionar component RectTransform, que permite interagir mais facilmente no canvas
+    width 2.5 height 3.5
+  adicionar box colider 2d 
+    width 2.5 height 3.5
+  editar Canvas dentro do CardPrefab
+    CardCanvas
+      RectTransform
+        PosX 1.25 PosY 1.75 - assim o conteúdo da carta fica dentro centralizado
+      Anchor Presets
+        center center
+
+
+Editar CardPrefab
+  Adicionar UI>Image ao CardCanvas, chamado CardHighlight
+    sprite será TutorialCardHighlight
+    width 2.7 e height 3.7 (ligeiramente maior que o 2.5 e 3.5 então fica aparecendo as bordas e dá impressão de Highlight)
+    tornar Desativado, porque não vai aparecer por padrão
+
+
+No cenário
+  Selecionar o canvas que contém: HandManager, DeckManager e HandPosition
+      Alterar Canvas Scaler
+        Screen Match Mode -> Expand
+    
+
+Create Script CardMovement
