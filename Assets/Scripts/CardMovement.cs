@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -10,7 +8,7 @@ public class CardMovement : MonoBehaviour, IDragHandler, IPointerDownHandler, IP
     private Vector2 originalLocalPointerPosition; // mouse pointer
     private Vector3 originalPanelLocalPosition; // card original location
     private Vector3 originalScale; // 
-    private int currentState = 0; // 0 initial ; 1 hover; 2 dragged;   
+    private int currentState = 0; // 0 initial ; 1 hover; 2 dragged; 3 dragged and arrow  
     private Quaternion originalRotation;
     private Vector3 originalPosition;
 
@@ -26,7 +24,7 @@ public class CardMovement : MonoBehaviour, IDragHandler, IPointerDownHandler, IP
     void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
-        canvas = GetComponent<Canvas>();
+        canvas = GetComponentInParent<Canvas>();
         originalScale = rectTransform.localScale;
         originalPosition = rectTransform.localPosition;
         originalRotation = rectTransform.localRotation;
@@ -40,17 +38,19 @@ public class CardMovement : MonoBehaviour, IDragHandler, IPointerDownHandler, IP
                 HandleHoverState();
                 break;
             case 2:
-                HandleDrageState();
+                HandleDragState();
                 if (!Input.GetMouseButton(0)) // check if mouse button is released
                 {
                     TransitionToState0();
                 }
+                break;
             case 3:
                 HandlePlayState();
                 if (!Input.GetMouseButton(0)) // check if mouse button is released
                 {
                     TransitionToState0();
                 }
+                break;
             default:
                 break;
         }
@@ -59,7 +59,7 @@ public class CardMovement : MonoBehaviour, IDragHandler, IPointerDownHandler, IP
     private void TransitionToState0()
     {
         currentState = 0;
-        rectTransform.localScale = originalScale; // reset scake
+        rectTransform.localScale = originalScale; // reset scale
         rectTransform.localRotation = originalRotation; // reset rotation
         rectTransform.localPosition = originalPosition; // reset position
         glowEffect.SetActive(false); // disable glow effect
@@ -91,24 +91,53 @@ public class CardMovement : MonoBehaviour, IDragHandler, IPointerDownHandler, IP
         if (currentState == 1)
         {
             currentState = 2;
+            // capture the position in relation to the camera on the world
             RectTransformUtility.ScreenPointToLocalPointInRectangle(canvas.GetComponent<RectTransform>(), eventData.position, eventData.pressEventCamera, out originalLocalPointerPosition);
+            originalPanelLocalPosition = rectTransform.localPosition;
+        }
+    }
+
+    public void OnDrag(PointerEventData eventData)
+    {
+        if (currentState == 2)
+        {
+            Vector2 localPointerPosition;
+            if (RectTransformUtility.ScreenPointToLocalPointInRectangle(canvas.GetComponent<RectTransform>(), eventData.position, eventData.pressEventCamera, out localPointerPosition))
+            {
+                rectTransform.position = Input.mousePosition;
+                if (rectTransform.localPosition.y > cardPlay.y)
+                {
+                    currentState = 3;
+                    playArrow.SetActive(true);
+                    // TODO, use Lerp to smooth move the card to PlayPosition
+                    rectTransform.localPosition = playPosition;
+                }
+            }
         }
     }
 
     private void HandleHoverState()
     {
         glowEffect.SetActive(true);
-        rectTransform.localScale = originalScale * selectScale;
+        rectTransform.localScale = originalScale * selectScale; // increases card scale, selected effect
     }
 
-    public void OnDrag(PointerEventData eventData)
+    private void HandleDragState()
     {
-        throw new System.NotImplementedException();
+        //set the card's rotation to zero
+        rectTransform.localRotation = Quaternion.identity;
     }
 
+    private void HandlePlayState()
+    {
+        rectTransform.localPosition = playPosition;
+        rectTransform.localRotation = Quaternion.identity;
 
-
-
-
-
+        // revert card drag ?
+        if (Input.mousePosition.y < cardPlay.y)
+        {
+            currentState = 2;
+            playArrow.SetActive(false);
+        }
+    }
 }
