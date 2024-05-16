@@ -28,7 +28,7 @@ public class DragUIObject : MonoBehaviour, IDragHandler, IPointerDownHandler //T
   {
     if (RectTransformUtility.ScreenPointToLocalPointInRectangle(canvas.GetComponent<RectTransform>(), eventData.position, eventData.pressEventCamera, out Vector2 localPointerPosition))
     {
-      localPointerPosition /= canvas.scaleFactor;
+      localPointerPosition /= canvas.scaleFactor; // for smooth de drag in differents resolutions
 
       // Adjusting the movement based on sensitivity
       Vector3 offsetToOriginal = (localPointerPosition - originalLocalPointerPosition) * movementSensitivity;
