@@ -35,3 +35,11 @@ No cenário
     
 
 Create Script CardMovement
+  set variables as
+    CardPlay
+    PlayArrow
+    GlowEffect
+    PlayPosition
+
+
+Attach the CardMovement script as a component to CardPrefab
