@@ -1,0 +1,42 @@
+https://www.youtube.com/watch?v=_1pz_ohupPs&list=PLIv88Qi-D5vzh3JDGbxHz0Kq0gd_jEKcN&index=4
+
+Script BattleHUD
+  script somente para alteração visual dos componentes da tela
+  atribuir esse script ao Game Object que agrupo os objetos UI do HUD
+  recebe
+    elementos visuais que serão alterados do tipo Text, Slider
+  Função de alterar valores recebe o objeto de Domínio do Player/Enemy
+
+Script BattleSystem
+    recebe 
+      enemyPrefab, playerPrefab como GameObject
+      enemy, player terreno base como Transform
+      enemy/player BattleHUD, arrastando GameObject que contém script BattleHUD para o inspector
+
+    define 
+      enum BattleState {START, PLAYER_TURN, ENEMY_TURN, WON, LOST}
+    
+    Start - função
+      initia estado do jogo = BattleState.START
+      SetupBattle()
+
+    SetupBattle - função
+      instancia objetos enemy e player a partir do prefab
+        GameObject playerGO = Instantiate(playerPrefab, playerBattleStation);
+      captura o script de cada prefab
+        playerDomain = playerGO.GetComponent<PlayerDomain>();
+      muda estado do jogo para BattleState.PLAYER_TURN
+      
+      retornamos um yield return new WaitForSeconds(2f)
+        para que a função start battle demore 2 segundos antes de executar os próximos passos,
+        para dar um tempo visual do jogador entender as mudanças que ocorrem em tela
+
+      invoca PlayerTurn()
+
+      note que: só depois dos 2 segundos mudamos o estado para PLAYER_TURN e invocamos PlayerTurn()
+
+    PlayerTurn - função
+
+       
+    
+
