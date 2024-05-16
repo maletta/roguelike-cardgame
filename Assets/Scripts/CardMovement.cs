@@ -18,6 +18,7 @@ public class CardMovement : MonoBehaviour, IDragHandler, IPointerDownHandler, IP
     [SerializeField] private Vector3 playPosition; // where our card going to jump to
     [SerializeField] private GameObject glowEffect;
     [SerializeField] private GameObject playArrow;
+    [SerializeField] private float lerpFactor = 0.1f;
 
 
 
@@ -104,13 +105,13 @@ public class CardMovement : MonoBehaviour, IDragHandler, IPointerDownHandler, IP
             Vector2 localPointerPosition;
             if (RectTransformUtility.ScreenPointToLocalPointInRectangle(canvas.GetComponent<RectTransform>(), eventData.position, eventData.pressEventCamera, out localPointerPosition))
             {
-                rectTransform.position = Input.mousePosition;
+                rectTransform.position = Vector3.Lerp(rectTransform.position, Input.mousePosition, lerpFactor);
                 if (rectTransform.localPosition.y > cardPlay.y)
                 {
                     currentState = 3;
                     playArrow.SetActive(true);
                     // TODO, use Lerp to smooth move the card to PlayPosition
-                    rectTransform.localPosition = playPosition;
+                    rectTransform.localPosition = Vector3.Lerp(rectTransform.position, playPosition, lerpFactor);
                 }
             }
         }
