@@ -1,0 +1,34 @@
+Make dynamic array that follows the mouse from the card position
+
+Main Canvas
+  criar ui chamado - ArrowHead
+    definir largura e altura
+    add arrow Sprite - sprite de uma seta
+    criar prefab arrastando para pasta de prefab
+      Prefab
+        posição 0 0 0 
+        cor preta
+        pivor anchor middle right
+        Duplicar prefab (effect de outlined)
+          escala 0.8 0.8
+          cor branca
+          pivot middle middle
+          posicao 0 0 0
+
+
+
+  criar ui chamado - Dot
+    definir largura e altura
+    add BG script - sprite de um círculo preenchido
+    criar prefab arrastando para a pasta prefab
+      Duplicar prefab
+        cor branca
+        escala 0.8 0.8
+
+
+Criar ArchRendered - Script
+  script responsável por criar a flecha e o arco de bolinhas que conectam o card e a flecha
+
+CardPrefab
+  PlayArrow - componente
+    add ArcRenderer - Script
