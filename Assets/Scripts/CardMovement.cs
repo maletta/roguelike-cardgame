@@ -110,7 +110,6 @@ public class CardMovement : MonoBehaviour, IDragHandler, IPointerDownHandler, IP
                 {
                     currentState = 3;
                     playArrow.SetActive(true);
-                    // TODO, use Lerp to smooth move the card to PlayPosition
                     rectTransform.localPosition = Vector3.Lerp(rectTransform.position, playPosition, lerpFactor);
                 }
             }
