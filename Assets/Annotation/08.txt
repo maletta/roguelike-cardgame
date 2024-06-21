@@ -1,0 +1,32 @@
+Download outlined grid sprite do google drive -> Assets\Sprites\GridOutline.png
+
+Garantir que tamanho do Grid seja sempre do tamanho de um quadrado, imagem é do tamanho de 536x536.
+Definir borda de 12 pixels porque o sprite tem borda e torna a imagem escalável, esticável eu acredito
+
+  Sprite Mode
+    Pixels Per Unit = 536
+  Sprite Editor
+    Border Top,Right,Bottom,Left = 1
+  Transform
+    x=0,y=0,z=0
+
+
+Criar script GridCell
+
+Criar script GridManager
+
+
+Create empty GridCellPrefab
+  Sprite Renderer
+    Sprite = GridOutline.png
+
+  Box Collider 2D
+    Is Trigger = true
+
+  add script GridCell Script
+
+Create a prefab from GridCellPrefab to Prefab folder with drag and drop
+
+Create Empty GridManager
+  add script GridManager Script
+    add grid cell prefab to grid cell prefab on Editor

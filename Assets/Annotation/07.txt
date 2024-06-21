@@ -1,0 +1,16 @@
+Criar script AudioManager
+Criar script OptionsManager
+
+Main Canvas
+  criar Empty AudioManager
+    atribuir AudioManager script
+  
+  ciar Empty OptionsManager
+    atribuir OptionsManager script
+
+Criar script GameManager
+  script terá propriedade do tipo GameManager public static
+  script será singleton
+  script iniciará e conterá valores que serão compartilhados entre cenas
+
+  

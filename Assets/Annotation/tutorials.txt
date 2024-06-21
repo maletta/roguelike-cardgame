@@ -34,3 +34,9 @@ https://www.youtube.com/watch?v=msPNJ2cxWfw&list=PLzDRvYVwl53sSmEcIgZyDzrc0Smpq_
 Collection Manager tutorial - Show Card List with pagination
 https://www.youtube.com/watch?v=mhwGQ9XRBD8
 
+
+UTILS
+
+Grid Placement Unity - to position card on battle field
+
+Flip Sprite Unity - to turn your card

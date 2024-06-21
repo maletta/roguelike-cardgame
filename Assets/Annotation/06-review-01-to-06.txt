@@ -1,0 +1,4 @@
+Criar UIPositionObject - scrtipt
+  anexar ao GameObject HandPosition
+  script responsável por definir a posição da mão independente as dimensões de qualquer tela, responsividade
+

@@ -9,18 +9,34 @@ public class DeckManager : MonoBehaviour
     public List<Card> allCards = new List<Card>();
     private int currentIndex = 0;
 
+    // refactor variables
+    public int startingHandSize = 6;
+    public int maxHandSize;
+    public int currentHandSize;
+    private HandManager handManager;
+
     void Start()
     {
-        // Load all card assets from the Resources folder
+        //Load all card assets from the Resources folder
         Card[] cards = Resources.LoadAll<Card>("Cards");
 
-        // Add the loaded cards to the allCards list
+        //Add the loaded cards to the allCards list
         allCards.AddRange(cards);
 
-        HandManager hand = FindObjectOfType<HandManager>();
-        for (int i = 0; i < 6; i++)
+        handManager = FindObjectOfType<HandManager>();
+        maxHandSize = handManager.maxHandSize;
+        for (int i = 0; i < startingHandSize; i++)
         {
-            DrawCard(hand);
+            Debug.Log($"Drawing Card");
+            DrawCard(handManager);
+        }
+    }
+
+    void Update()
+    {
+        if (handManager != null)
+        {
+            currentHandSize = handManager.cardsInHand.Count;
         }
     }
 
@@ -29,14 +45,13 @@ public class DeckManager : MonoBehaviour
     public void DrawCard(HandManager handManager)
     {
         if (allCards.Count == 0)
-        {
             return;
+
+        if (currentHandSize < maxHandSize)
+        {
+            Card nextCard = allCards[currentIndex];
+            handManager.AddCardToHand(nextCard);
+            currentIndex = (currentIndex + 1) % allCards.Count;// move index to zero when current index == allCards.Count
         }
-
-        Card nextCard = allCards[currentIndex];
-        handManager.AddCardToHand(nextCard);
-
-        Debug.Log($"allCards.Count={allCards.Count}; currentIndex={currentIndex}; nextIndex={currentIndex + 1 % allCards.Count}");
-        currentIndex = currentIndex + 1 % allCards.Count; // move index to zero when current index == allCards.Count
     }
 }
