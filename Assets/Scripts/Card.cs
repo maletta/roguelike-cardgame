@@ -18,6 +18,11 @@ namespace NBESQ_Productions
         public int damageMax;
         public Sprite cardSprite;
         public List<DamageType> damageTypes;
+        public GameObject prefab;
+        public int range;
+        public AttackPattern attackPattern;
+        public PriorityTarget priorityTarget;
+
 
     }
 
@@ -40,5 +45,27 @@ namespace NBESQ_Productions
         Light,
         Air
     }
+
+    public enum AttackPattern
+    {
+        Single,
+        Multitarget,
+        Cross,
+        Column,
+        Row,
+        TwoByTwo,
+        FourByFour
+    }
+
+    public enum PriorityTarget
+    {
+        Close,
+        Far,
+        LeastCurrentHealth,
+        MostCurrentHealth,
+        MostMaxHealth,
+        MostDamage
+    }
+
 
 }

@@ -668,6 +668,7 @@ MonoBehaviour:
   - {fileID: 862112181629442492}
   - {fileID: 4414722374510703763}
   damageImage: {fileID: 3797023922313168404}
+  displayImage: {fileID: 610925581906688378}
 --- !u!61 &1002674430740508039
 BoxCollider2D:
   m_ObjectHideFlags: 0

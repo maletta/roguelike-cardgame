@@ -30,3 +30,4 @@ Create a prefab from GridCellPrefab to Prefab folder with drag and drop
 Create Empty GridManager
   add script GridManager Script
     add grid cell prefab to grid cell prefab on Editor
+

@@ -1,0 +1,7 @@
+Edit Card script
+  adicionando variáveis para tipos para alvos, padrão de ataque,
+  para prefab, etc
+
+
+Adicionando prefab aos Resources de cada card, aos prefabs de cada card que são os 
+scriptable objetos dentro de Resources/Cards

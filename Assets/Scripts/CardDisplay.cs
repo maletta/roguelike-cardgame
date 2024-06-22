@@ -17,6 +17,7 @@ public class CardDisplay : MonoBehaviour
     public TMP_Text damageText;
     public Image[] typeImages;
     public Image damageImage;
+    public Image displayImage;
 
     private Color[] cardColors = {
         new Color(0.44f, 0f, 0f), // Fire
@@ -36,18 +37,6 @@ public class CardDisplay : MonoBehaviour
         Color.white, // Air
     };
 
-
-    void Start() // Start is called before the first frame update
-    {
-
-        this.UpdateCardDisplay();
-
-    }
-
-    void Update() // Update is called once per frame
-    {
-    }
-
     public void UpdateCardDisplay()
     {
         // Update the main card image color based on the first card type
@@ -61,6 +50,7 @@ public class CardDisplay : MonoBehaviour
         nameText.SetText(cardData.cardName);
         healthText.SetText(cardData.health.ToString());
         damageText.SetText($"{cardData.damageMin} - {cardData.damageMax}");
+        displayImage.sprite = cardData.cardSprite;
 
         for (int i = 0; i < typeImages.Length; i++)
         {
