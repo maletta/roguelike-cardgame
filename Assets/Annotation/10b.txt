@@ -17,3 +17,8 @@ Main Canvas
         
 
 Create DrawPile script
+
+
+Create Empty DrawPileManager
+
+

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -14,6 +15,7 @@ public class CardMovement : MonoBehaviour, IDragHandler, IPointerDownHandler, IP
     private GridManager gridManager;
     private readonly int maxColumn = 2;
 
+
     [SerializeField] private float selectScale = 1.1f;
     [SerializeField] private Vector2 cardPlay;
     [SerializeField] private Vector3 playPosition;
@@ -28,6 +30,7 @@ public class CardMovement : MonoBehaviour, IDragHandler, IPointerDownHandler, IP
     [SerializeField] private int playPositionXDivider = 4;
     [SerializeField] private float playPositionXMultiplier = 1f;
     [SerializeField] private bool needUpdatePlayPosition = false;
+    private LayerMask gridLayerMask;
 
     void Awake()
     {
@@ -46,6 +49,8 @@ public class CardMovement : MonoBehaviour, IDragHandler, IPointerDownHandler, IP
         updateCardPlayPostion();
         updatePlayPostion();
         gridManager = FindObjectOfType<GridManager>();
+
+        gridLayerMask = LayerMask.GetMask("Grid");
     }
 
     void Update()
@@ -157,7 +162,7 @@ public class CardMovement : MonoBehaviour, IDragHandler, IPointerDownHandler, IP
         if (!Input.GetMouseButton(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
+            RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity, gridLayerMask);
 
             if (hit.collider != null && hit.collider.GetComponent<GridCell>())
             {

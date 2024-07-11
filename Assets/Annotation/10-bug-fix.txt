@@ -1,0 +1,11 @@
+CardPrefab
+  editar para ficar na layer que ignora ray cast, adicionar para todos os filhos
+
+
+GridCell Prefab
+  criar uma layer chamada Grid e adicionar o GridCell prefab e todos os filhos
+
+
+CardMoviment
+  Adicionar variável para citar a camada em que irá observar a movimentação de cartas 
+  Adicionar a vairável de layer de camada ao método raycast.
