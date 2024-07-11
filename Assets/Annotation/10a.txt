@@ -1,0 +1,25 @@
+Create Discard Pile, Create Draw Pile
+
+
+
+
+renomear script GridCellHighliter para GridCellDisplay
+
+GridCellHighliter
+  criar variáveis para cores do contorno do grid para 
+    não pode adicionar card;
+    pode adicionar card;
+    hover padrão para quando não for adicionar card;
+  criar variavel para background do gridcell
+  Criar 2D Sprite Square na pasta Resources
+  Atribuir os background ao prefab do gridcell 
+
+  
+GameManager
+  criar varivável global boolean CardPlaying para controlar se está sendo realizada 
+  a ação de adicionar carta ao campo
+
+CardMovement
+  ajudar a controlar a variável de estado de CardPlaying, definindo como false
+  quando o card for movido 
+

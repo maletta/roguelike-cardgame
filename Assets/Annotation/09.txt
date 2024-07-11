@@ -5,3 +5,15 @@ Edit Card script
 
 Adicionando prefab aos Resources de cada card, aos prefabs de cada card que são os 
 scriptable objetos dentro de Resources/Cards
+
+
+
+Edit CardDisplay script
+  adicionando variável para referenciar o sprite da imagem do card
+  removendo função start e update
+
+
+Edit CardMoviment script
+  adicionando variável GridManager
+  editando função HandlePlayState
+    

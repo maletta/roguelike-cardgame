@@ -1,0 +1,19 @@
+Create Discard Pile, Create Draw Pile
+
+
+Create DiscardManager script
+  variable to control pile count 
+  methods to add card do Pile
+  methods to remove card from Pile
+
+Main Canvas
+
+  create empty 
+    rename Discard Manager
+      Add DiscardManager Script
+
+  create UI > TextMeshPro and  rename DiscardCount
+    create UI > TextMeshPro and rename Title
+        
+
+Create DrawPile script

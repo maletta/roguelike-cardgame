@@ -12,6 +12,7 @@ public class CardMovement : MonoBehaviour, IDragHandler, IPointerDownHandler, IP
     private Quaternion originalRotation;
     private Vector3 originalPosition;
     private GridManager gridManager;
+    private readonly int maxColumn = 2;
 
     [SerializeField] private float selectScale = 1.1f;
     [SerializeField] private Vector2 cardPlay;
@@ -81,6 +82,7 @@ public class CardMovement : MonoBehaviour, IDragHandler, IPointerDownHandler, IP
     private void TransitionToState0()
     {
         currentState = 0;
+        GameManager.Instance.PlayingCard = false;
         rectTransform.localScale = originalScale; //Reset Scale
         rectTransform.localRotation = originalRotation; //Reset Rotation
         rectTransform.localPosition = originalPosition; //Reset Position
@@ -144,6 +146,11 @@ public class CardMovement : MonoBehaviour, IDragHandler, IPointerDownHandler, IP
 
     private void HandlePlayState()
     {
+        if (!GameManager.Instance.PlayingCard)
+        {
+            GameManager.Instance.PlayingCard = true;
+        }
+
         rectTransform.localPosition = playPosition;
         rectTransform.localRotation = Quaternion.identity;
 
@@ -157,9 +164,11 @@ public class CardMovement : MonoBehaviour, IDragHandler, IPointerDownHandler, IP
                 GridCell cell = hit.collider.GetComponent<GridCell>();
                 Vector2 targetPos = cell.gridIndex;
 
-                if (gridManager.AddObjectToGrid(GetComponent<CardDisplay>().cardData.prefab, targetPos))
+                if (cell.gridIndex.x < maxColumn && gridManager.AddObjectToGrid(GetComponent<CardDisplay>().cardData.prefab, targetPos))
                 {
                     HandManager handManager = FindAnyObjectByType<HandManager>();
+                    DiscardManager discardManager = FindObjectOfType<DiscardManager>();
+                    discardManager.AddToDiscard(GetComponent<CardDisplay>().cardData);
                     handManager.cardsInHand.Remove(gameObject);
                     handManager.UpdateHandVisuals();
                     Debug.Log("Placed character");

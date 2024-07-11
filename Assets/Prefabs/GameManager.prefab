@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 987ea635866bca5478556a74b5043a05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayingCard: 0
 --- !u!1001 &24145705711822446
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -259,6 +260,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2495549024083613464}
     m_Modifications:
+    - target: {fileID: 588118591315461226, guid: 1fe0b6d4e2cc10c4cbd3b201e5b7289b, type: 3}
+      propertyPath: maxHandSize
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 6263527215998428751, guid: 1fe0b6d4e2cc10c4cbd3b201e5b7289b, type: 3}
       propertyPath: m_Name
       value: DeckManager

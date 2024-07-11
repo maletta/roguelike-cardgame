@@ -15,6 +15,9 @@ public class GameManager : MonoBehaviour
     public OptionsManager OptionsManager { get; private set; }
     public AudioManager AudioManager { get; private set; }
     public DeckManager DeckManager { get; private set; }
+
+
+    public bool PlayingCard = false;
     private void Awake()
     {
         if (Instance == null)

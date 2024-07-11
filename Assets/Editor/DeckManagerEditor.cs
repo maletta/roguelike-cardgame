@@ -4,15 +4,15 @@ using UnityEngine;
 
 #if UNITY_EDITOR
 using UnityEditor;
-[CustomEditor(typeof(DeckManager))]
-public class DeckManagerEditor : Editor
+[CustomEditor(typeof(DrawPileManager))]
+public class DrawPileManagerEditor : Editor
 {
     public override void OnInspectorGUI()
     {
         DrawDefaultInspector();
 
-        // as an event that return a target. The event is about DeckManager, so return a DeckManager
-        DeckManager deckManager = (DeckManager)target;
+        // as an event that return a target. The event is about DrawPileManager, so return a DrawPileManager
+        DrawPileManager drawPileManager = (DrawPileManager)target;
 
         if (GUILayout.Button("Draw Next Card")) // create a button and when clicked execute the block
         {
@@ -20,7 +20,7 @@ public class DeckManagerEditor : Editor
             HandManager handManager = FindObjectOfType<HandManager>();
             if (handManager != null)
             {
-                deckManager.DrawCard(handManager);
+                drawPileManager.DrawCard(handManager);
             }
         }
 
@@ -30,5 +30,5 @@ public class DeckManagerEditor : Editor
 #endif
 
 // This class does not need to be assigned to the Unity inspector
-// [CustomEditor(typeof(DeckManager))] This is what this association does
-// It tells Unity that DeckManagerEditor is a Custom Editor for all objects of type DeckManager
+// [CustomEditor(typeof(DrawPileManager))] This is what this association does
+// It tells Unity that DrawPileManager is a Custom Editor for all objects of type DrawPileManager
