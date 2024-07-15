@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // define a singleton
+[DefaultExecutionOrder(-100)]
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }

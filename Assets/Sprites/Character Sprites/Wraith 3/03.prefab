@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3497179356983323379}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bone_000
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   m_Component:
   - component: {fileID: 885650309207979945}
   - component: {fileID: 475430450697350973}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Right Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128,7 +128,8 @@ GameObject:
   - component: {fileID: 3184376472574171725}
   - component: {fileID: 968220621557490181}
   - component: {fileID: 3897198352222962771}
-  m_Layer: 0
+  - component: {fileID: 3350092573723898244}
+  m_Layer: 7
   m_Name: 03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -186,6 +187,51 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sortingOrder: 0
   applySpriterZOrder: 0
+--- !u!61 &3350092573723898244
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1508163028281027933}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.11973715, y: 1.440475}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.2699404, y: 3.0827017}
+  m_EdgeRadius: 0
 --- !u!1 &1652921836739681341
 GameObject:
   m_ObjectHideFlags: 0
@@ -196,7 +242,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4716269996630201677}
   - component: {fileID: 7007747489831126551}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Left Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -280,7 +326,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5774066577447415176}
   - component: {fileID: 6753477393083155232}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Right Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -364,7 +410,7 @@ GameObject:
   m_Component:
   - component: {fileID: 54850545417894229}
   - component: {fileID: 2429990187814001932}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Left Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -447,7 +493,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2378277490035325764}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bone_002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -480,7 +526,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 291578499275749271}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bone_006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -516,7 +562,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2034424050620113355}
   - component: {fileID: 1278965202634200350}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -601,7 +647,7 @@ GameObject:
   - component: {fileID: 169114535296253798}
   - component: {fileID: 821326137790891489}
   - component: {fileID: 394147916981787585}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Face 01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -701,7 +747,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8931512541588418730}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bone_001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -734,7 +780,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8385443483830886506}
   - component: {fileID: 267560565877747556}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -817,7 +863,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5685003964057105144}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bone_007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -850,7 +896,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7588024192355128186}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bone_003
   m_TagString: Untagged
   m_Icon: {fileID: 0}

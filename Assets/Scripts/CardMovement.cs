@@ -1,4 +1,5 @@
 using System;
+using NBESQ_Productions;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -30,7 +31,14 @@ public class CardMovement : MonoBehaviour, IDragHandler, IPointerDownHandler, IP
     [SerializeField] private int playPositionXDivider = 4;
     [SerializeField] private float playPositionXMultiplier = 1f;
     [SerializeField] private bool needUpdatePlayPosition = false;
+
     private LayerMask gridLayerMask;
+    private LayerMask characterLayerMask;
+    private Card cardData;
+    private CardDisplay cardDisplay;
+    HandManager handManager;
+    DiscardManager discardManager;
+
 
     void Awake()
     {
@@ -48,9 +56,15 @@ public class CardMovement : MonoBehaviour, IDragHandler, IPointerDownHandler, IP
 
         updateCardPlayPostion();
         updatePlayPostion();
+
         gridManager = FindObjectOfType<GridManager>();
+        handManager = FindObjectOfType<HandManager>();
+        discardManager = FindObjectOfType<DiscardManager>();
+        cardDisplay = FindObjectOfType<CardDisplay>();
 
         gridLayerMask = LayerMask.GetMask("Grid");
+        characterLayerMask = LayerMask.GetMask("Characters");
+        cardData = cardDisplay.cardData;
     }
 
     void Update()
@@ -162,23 +176,14 @@ public class CardMovement : MonoBehaviour, IDragHandler, IPointerDownHandler, IP
         if (!Input.GetMouseButton(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity, gridLayerMask);
 
-            if (hit.collider != null && hit.collider.GetComponent<GridCell>())
+            if (cardData is Character characterCard)
             {
-                GridCell cell = hit.collider.GetComponent<GridCell>();
-                Vector2 targetPos = cell.gridIndex;
-
-                if (cell.gridIndex.x < maxColumn && gridManager.AddObjectToGrid(GetComponent<CardDisplay>().cardData.prefab, targetPos))
-                {
-                    HandManager handManager = FindAnyObjectByType<HandManager>();
-                    DiscardManager discardManager = FindObjectOfType<DiscardManager>();
-                    discardManager.AddToDiscard(GetComponent<CardDisplay>().cardData);
-                    handManager.cardsInHand.Remove(gameObject);
-                    handManager.UpdateHandVisuals();
-                    Debug.Log("Placed character");
-                    Destroy(gameObject);
-                }
+                TryToPlayCharacterCard(ray, characterCard);
+            }
+            else if (cardData is Spell spellCard)
+            {
+                TryToPlaySpellCard(ray, spellCard);
             }
 
             TransitionToState0();
@@ -188,6 +193,40 @@ public class CardMovement : MonoBehaviour, IDragHandler, IPointerDownHandler, IP
         {
             currentState = 2;
             playArrow.SetActive(false);
+        }
+    }
+
+    private void TryToPlayCharacterCard(Ray ray, Character characterCard)
+    {
+        RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity, gridLayerMask);
+
+        if (hit.collider != null && hit.collider.GetComponent<GridCell>())
+        {
+            GridCell cell = hit.collider.GetComponent<GridCell>();
+            Vector2 targetPos = cell.gridIndex;
+
+            if (cell.gridIndex.x < maxColumn && gridManager.AddObjectToGrid(characterCard.prefab, targetPos))
+            {
+                handManager.cardsInHand.Remove(gameObject);
+                discardManager.AddToDiscard(cardData);
+                handManager.UpdateHandVisuals();
+                Debug.Log($"Placed character {characterCard.prefab}");
+                Destroy(gameObject);
+            }
+        }
+    }
+
+    private void TryToPlaySpellCard(Ray ray, Spell spellCard)
+    {
+        RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity, characterLayerMask);
+
+        if (hit.collider != null)
+        {
+            handManager.cardsInHand.Remove(gameObject);
+            discardManager.AddToDiscard(cardData);
+            handManager.UpdateHandVisuals();
+            Debug.Log($"Played spell {spellCard.name}");
+            Destroy(gameObject);
         }
     }
 

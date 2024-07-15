@@ -48,3 +48,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6b7e940dcb63904f81498aa3efa8840, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  muteAudio: 0
+  fontList:
+  - {fileID: 11400000, guid: 7889dfadaf64a074d957dcce878fa38d, type: 2}
+  - {fileID: 11400000, guid: b099389f069b63d4591dc99e47cd372a, type: 2}
+  - {fileID: 11400000, guid: 7889dfadaf64a074d957dcce878fa38d, type: 2}
+  - {fileID: 11400000, guid: 9e7b2e80e2281274ba94b922835bc498, type: 2}
+  - {fileID: 11400000, guid: 9e7b2e80e2281274ba94b922835bc498, type: 2}

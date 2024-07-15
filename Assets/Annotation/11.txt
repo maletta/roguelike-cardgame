@@ -1,0 +1,5 @@
+
+Importando fontes do link 
+https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbDNrdXNTXzlLc2h1T1pNaUhnajBmb3ViY25mQXxBQ3Jtc0tsWVBpNVhYSllWYWxBbFFPem9PSG80LVZBRk5pU0FjWHRkX1hkUWFVT253bV9tS1ZvWnRzOHVVYnVzTU5VM1ZZRll5bUkxRl9ZUmhTaXZaTEZ0VXNkejZoT1UxS1dBdHBDbHBWVFFsbkRhYlJiV1BaNA&q=https%3A%2F%2Fwww.fontspace.com%2Fsakat-font-f69117&v=4EUkdkuCHRE
+
+Criando asset de fontes a partir do arquivo da fontes
