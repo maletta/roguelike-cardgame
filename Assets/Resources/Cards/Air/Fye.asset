@@ -9,10 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c550b2f7da14c524b959d9be404f4ee6, type: 3}
+  m_Script: {fileID: 11500000, guid: aee5e8f24a745c24783d776ab7bcfc8e, type: 3}
   m_Name: Fye
   m_EditorClassIdentifier: 
   cardName: Fye
-  cardTypes: 0500000000000000
+  cardType: 0500000000000000
   cardSprite: {fileID: 21300000, guid: e10cdacc0e64f084891d3f4fda88112c, type: 3}
-  description: Mob2
+  description: It's Fye
+  health: 4
+  damageMin: 7
+  damageMax: 9
+  damageType: 05000000
+  prefab: {fileID: 2618609479374377528, guid: 14bb677d11867704ca3b25080fbcadcf, type: 3}
+  range: 5
+  attackPattern: 2
+  priorityTarget: 1

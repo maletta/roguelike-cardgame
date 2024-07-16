@@ -9,10 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c550b2f7da14c524b959d9be404f4ee6, type: 3}
+  m_Script: {fileID: 11500000, guid: aee5e8f24a745c24783d776ab7bcfc8e, type: 3}
   m_Name: Nephis
   m_EditorClassIdentifier: 
   cardName: Nephis
-  cardTypes: 02000000
-  cardSprite: {fileID: 21300000, guid: 48cd123c603b2284da2443ee887cf0ea, type: 3}
-  description: Mob18
+  cardType: 0200000005000000
+  cardSprite: {fileID: 21300000, guid: 1fb6d586881eb9942b6f4535a8f589c9, type: 3}
+  description: It's Nephis
+  health: 8
+  damageMin: 8
+  damageMax: 8
+  damageType: 02000000
+  prefab: {fileID: 1987766920739824, guid: 09a03a70edc52de409c512f47eb5c874, type: 3}
+  range: 3
+  attackPattern: 1
+  priorityTarget: 1

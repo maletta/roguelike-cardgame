@@ -9,10 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c550b2f7da14c524b959d9be404f4ee6, type: 3}
+  m_Script: {fileID: 11500000, guid: aee5e8f24a745c24783d776ab7bcfc8e, type: 3}
   m_Name: Empel
   m_EditorClassIdentifier: 
   cardName: Empel
-  cardTypes: 0400000005000000
-  cardSprite: {fileID: 21300000, guid: bf8e74c445fb7ab4d819f35abe39781d, type: 3}
-  description: Mob13
+  cardType: 0400000005000000
+  cardSprite: {fileID: 21300000, guid: 1c3c14d3798e03a42a6df1c78e00b4b6, type: 3}
+  description: It's Empel
+  health: 15
+  damageMin: 1
+  damageMax: 2
+  damageType: 04000000
+  prefab: {fileID: 1577502023061052, guid: 438423df18ba0f64ab984b82da4eefee, type: 3}
+  range: 6
+  attackPattern: 6
+  priorityTarget: 1

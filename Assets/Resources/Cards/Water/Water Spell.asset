@@ -9,13 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5100940e153a44d429335b68dc8f975f, type: 3}
-  m_Name: Health
+  m_Script: {fileID: 11500000, guid: 2a78af3d62d9c6f498ee24e75e63c3ba, type: 3}
+  m_Name: Water Spell
   m_EditorClassIdentifier: 
-  cardName: Health Spell
-  cardTypes: 04000000
+  cardName: Water Spell
+  cardType: 02000000
   cardSprite: {fileID: 21300000, guid: 1270fddaff5d5c44da7ce16d3257cd85, type: 3}
-  description: Add 10 to character's Health
+  description: Changes the Priority Target to Lowest Current Health
   spellType: 0
-  attributeTarget: 00000000
-  attributeChangeAmount: 0a000000
+  attibuteTarget: 06000000
+  attributeChangeAmount: 

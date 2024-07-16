@@ -51,6 +51,11 @@ public class CardDisplay : MonoBehaviour
         Color.white, // Air
     };
 
+    void Update()
+    {
+        UpdateCardDisplay();
+    }
+
     public void UpdateCardDisplay()
     {
         // All card changes

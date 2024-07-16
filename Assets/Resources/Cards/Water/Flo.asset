@@ -9,10 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c550b2f7da14c524b959d9be404f4ee6, type: 3}
+  m_Script: {fileID: 11500000, guid: aee5e8f24a745c24783d776ab7bcfc8e, type: 3}
   m_Name: Flo
   m_EditorClassIdentifier: 
-  cardName: Fio
-  cardTypes: 0200000004000000
+  cardName: Flo
+  cardType: 0200000004000000
   cardSprite: {fileID: 21300000, guid: 2ca3c4752d50c0e478ccd3b49cac7e79, type: 3}
-  description: Mob16
+  description: It's Flo
+  health: 12
+  damageMin: 6
+  damageMax: 10
+  damageType: 02000000
+  prefab: {fileID: 1571328342031654, guid: 1578dbbf01f3e2242923e22c1af2c7b6, type: 3}
+  range: 3
+  attackPattern: 5
+  priorityTarget: 1
